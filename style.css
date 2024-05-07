@@ -3,4 +3,6 @@ Theme Name: clobotics main theme
 Author: Maria Grysevych
 */
 
-body {background-color: rgb(249, 192, 57);};
+body {
+    background-color: rgb(249, 192, 57);
+};
