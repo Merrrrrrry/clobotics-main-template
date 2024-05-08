@@ -13,40 +13,47 @@ Template Name: About us
 
 <body>
 
+<!-- Hero Section WITHOUT navbar -->
+
+<div class="hero-section">
+        <!-- <div class="navbar">
+            <a class="home" href="<  ?php echo get_permalink(get_page_by_path('home')) ?>" style="order: -1;">Home</a>
+            <a href="<  ?php echo get_permalink(get_page_by_path('contact')) ?>">Contacts</a>
+            <a href="<  ?php echo get_permalink(get_page_by_path('faq')) ?>">FAQ</a>
+            <a href="<  ?php echo get_permalink(get_page_by_path('services')) ?>">Services</a>
+        </div> -->
+
+
 <!-- Hero Video (referenced from busters world) -->
-
 <div class="hero-section-background">
-<video autoplay muted loop class="video-background"> 
-    <source src="<?php echo get_template_directory_uri(); ?>/video/video-top.mp4" type="video/mp4">
-</video>
+    <video autoplay muted loop class="video-background"> 
+        <source src="<?php echo get_template_directory_uri(); ?>/video/video-top.mp4" type="video/mp4">
+    </video>
 
-<!-- Hero Section with navbar -->
+</div>
 
-<div class="hero-section"   style="background-image: <?php $image = get_field('hero_video'); ?> url('<?php echo esc_url($image["url"]); ?>'); background-size: cover; background-position: center; height: 100vh;">
-        <div class="navbar">
-            <a class="home" href="<?php echo get_permalink(get_page_by_path('home')) ?>" style="order: -1;">Home</a>
-            <a href="<?php echo get_permalink(get_page_by_path('contact')) ?>">Contacts</a>
-            <a href="<?php echo get_permalink(get_page_by_path('faq')) ?>">FAQ</a>
-            <a href="<?php echo get_permalink(get_page_by_path('services')) ?>">Services</a>
-        </div>
-
-    </div>
-    <div class="hero-content">
-        <h1 class="hero-text"><?php the_field('hero_text'); ?></h1>
-        <p class="hero-slogan"><?php the_field('hero_slogan'); ?></p>
+    <div class="hero-section-content">
+        <h1 class="hero page-title"> Meet Clobotics - vision technology company with offices all around the world </h1>
+        <p class="hero page-slogan"> </p>
     </div>
 </div>
 
 
-<!-- Article Section -->
 
-<div class="article_main">
-        <h2>Article title</h2>
-        <p>dolor sit amet, consectetur. adipiscing elit. Sed tincidunt velit nec mauriscursus, id venenatis justo convallis. Fusce vusto nec felis efficitur laoreet. Quisque velest id elit varius eleifend. Sed ac justo id nisi elementum fermentum. Praesent nec ultrices ex, vel bibendum justo. Curabitur tinciduntLorem ipsum dolor sit amet, consecteturadipiscing elit. Sed tincidunt velit nec mauriscursus, id venenatis justo convallis. Fusce velusto nec felis efficitur laoreet. Quisque veest id elit varius eleifend. Sed ac justo id nisielementum fermentum. Praesent nec ultricesex, vel bibendum justo. 
-        </p>
-        <a href="<?php echo get_permalink( get_page_by_path( 'services' ) ) ?>" class="button_yellow">Our products and servides</a>
-        <img src="....." alt=""> 
-    </div>
+<!-- Article Section -->
+<!-- Who we are -->
+
+<div class="article_main who-we-are">
+
+    <h2 class="article_title article_title_who_we_are"><?php the_field('article_title_who_we_are'); ?></h2>
+    <p class="subtitle_of_article subtitle_of_article_who_we_are"><?php the_field('subtitle_of_article_who_we_are'); ?></p>
+    <p class="article_text_who_we_are"><?php the_field('article_text_who_we_are'); ?></p>
+        <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Video presentation</a>
+        <img class="about-us-page who-we-are-img left" src="  ............  " alt=""> 
+        <img class="about-us-page who-we-are-img right" src="  ............  " alt=""> 
+</div>
+
+
 
 
 
