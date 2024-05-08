@@ -40,7 +40,7 @@ Template Name: About us
 
 
 
-<!-- Article Section -->
+<!-- Article  Section -->
 <!-- Who we are -->
 
 <div class="article_main who-we-are">
@@ -54,7 +54,7 @@ Template Name: About us
 </div>
 
 
-<!-- Article Section -->
+<!-- Article  Section -->
 <!-- One company Two directions -->
 
 <div class="article_secondary_main one_company_two_directions">
@@ -64,7 +64,60 @@ Template Name: About us
         <p class="wind_part_text"><?php the_field('wind_part_text'); ?></p>
                 <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Discover Wind services</a>
         <p class="retail_part_text"><?php the_field('retail_part_text'); ?></p>
-            <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Discover Retail services</a>
+                <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Discover Retail services</a>
+
+</div>
+
+
+<!-- Meet our team  Section -->
+
+<div class="meet_our_team">
+    <h4 class="article_title article_title_meet_our_team">Meet our team</h4>
+
+<!-- search function  (meet our team) -->
+
+<!-- button "Show more" with hover efect  (meet our team) -->
+
+
+            <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Show more</a> <!-- ???? -->
+
+</div>
+
+
+<!-- Join or Contact us  Section -->
+
+<div class="join_or_contact_us">
+
+    <img class="about-us-page join_or_contact_us_collage_img " src="  ............  " alt=""> 
+        <h5 class="article_title article_title_want_to_join"><?php the_field('article_title_want_to_join'); ?></h5>
+        <p class="subtitle_of_article_want_to_join"><?php the_field('subtitle_of_article_want_to_join'); ?></p>
+            <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Work for us</a>
+            <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Work with us</a>
+
+</div>
+
+
+<!-- Company history  Section (povered and coded by atother clobotics team) -->
+
+<div class="company_history">
+    <h6 class="article_title article_title_company_history">Company History</h6>
+</div>
+<!-- !!!!!!!!!!!!!!! -->
+
+
+
+<!-- News Articles linking  Section -->
+
+<div class="company_history">
+    <h7 class="article_title article_title_news_articles_linking">Discover Clobotics with our articles!</h7>
+
+</div>
+
+
+<!-- Subscribes for more  Section -->
+
+<div class="subscribes_for_more">
+    <p class="article_title_subscribes_for_more">Subscribes for more!</p>
 
 </div>
 
