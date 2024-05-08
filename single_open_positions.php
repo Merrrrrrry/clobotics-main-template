@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: single-open_positions
+Template Name: single_open_positions
 */
 ?>
 
@@ -8,13 +8,6 @@ Template Name: single-open_positions
 <?php get_header(); ?>
 
 <main>
-<?php
-// Output custom field values for debugging
-echo '<pre>';
-var_dump(get_fields());
-echo '</pre>';
-?>
-
     <?php while (have_posts()) : the_post(); ?>
         <article <?php post_class(); ?>>
             <h2><?php the_title(); ?></h2>
