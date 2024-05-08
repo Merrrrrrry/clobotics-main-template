@@ -10,12 +10,17 @@ Template Name: Career
 
     <h2>Open Positions</h2>
 
+    <!-- Search Bar -->
+    <form method="get" action="<?php echo esc_url(home_url('/')); ?>">
+        <input type="text" name="s" placeholder="Search for positions">
+        <button type="submit">Search</button>
+    </form>
+
     <?php
     
     $related_positions = get_field('related_job_positions');
 
-    if ($related_positions) :
-        ?>
+    if ($related_positions) : ?>
         <ul class="position-list">
             <?php foreach ($related_positions as $post) : setup_postdata($post); ?>
                 <li class="position-item">
@@ -31,7 +36,6 @@ Template Name: Career
                 </li>
             <?php endforeach; ?>
         </ul>
-
         <?php
         // Restore original post data
         wp_reset_postdata();
