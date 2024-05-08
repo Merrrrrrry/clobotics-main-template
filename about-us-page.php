@@ -59,12 +59,13 @@ Template Name: About us
 
 <div class="article_secondary_main one_company_two_directions">
 
-    <h3 class="article_title article_title_one_company_two_directions"><?php the_field('article_title_one_company_two_directions'); ?></h3>
-    <p class="wind_part_text"><?php the_field('wind_part_text'); ?></p>
-    <p class="retail_part_text"><?php the_field('retail_part_text'); ?></p>
-        <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Video presentation</a>
-        <img class="about-us-page one_company_two_directions_collage_img " src="  ............  " alt=""> 
-        
+    <img class="about-us-page one_company_two_directions_collage_img " src="  ............  " alt=""> 
+        <h3 class="article_title article_title_one_company_two_directions"><?php the_field('article_title_one_company_two_directions'); ?></h3>
+        <p class="wind_part_text"><?php the_field('wind_part_text'); ?></p>
+                <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Discover Wind services</a>
+        <p class="retail_part_text"><?php the_field('retail_part_text'); ?></p>
+            <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Discover Retail services</a>
+
 </div>
 
 
