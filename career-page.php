@@ -33,7 +33,7 @@ Template Name: Career
         </ul>
 
         <?php
-        // Restore original post data
+       
         wp_reset_postdata();
     else :
         ?>
