@@ -45,9 +45,9 @@ Template Name: About us
 
 <div class="article_main who-we-are">
 
-    <h2 class="article_title article_title_who_we_are"><?php the_field('article_title_who_we_are'); ?></h2>
-    <p class="subtitle_of_article subtitle_of_article_who_we_are"><?php the_field('subtitle_of_article_who_we_are'); ?></p>
-    <p class="article_text_who_we_are"><?php the_field('article_text_who_we_are'); ?></p>
+    <h2 class="article_title article_title_who_we_are"><?php get_field('article_title_who_we_are'); ?></h2>
+    <p class="subtitle_of_article subtitle_of_article_who_we_are"><?php get_field('subtitle_of_article_who_we_are'); ?></p>
+    <p class="article_text_who_we_are"><?php get_field('article_text_who_we_are'); ?></p>
         <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Video presentation</a>
         <img class="about-us-page who-we-are-img left" src="  ............  " alt=""> 
         <img class="about-us-page who-we-are-img right" src="  ............  " alt=""> 
