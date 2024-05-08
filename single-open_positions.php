@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Career single position
+Template Name: single-open_positions
 */
 ?>
 
