@@ -11,13 +11,15 @@ Template Name: Career
     <h2>Open Positions</h2>
 
     <?php
-    
-    $related_positions = get_field('related_job_positions');
+    $open_positions = new WP_Query(array(
+        'post_type' => 'open_positions', 
+        'posts_per_page' => -1 
+    ));
 
-    if ($related_positions) :
+    if ($open_positions->have_posts()) :
         ?>
         <ul class="position-list">
-            <?php foreach ($related_positions as $post) : setup_postdata($post); ?>
+            <?php while ($open_positions->have_posts()) : $open_positions->the_post(); ?>
                 <li class="position-item">
                     <h3><?php the_title(); ?></h3>
                     <p>
@@ -29,7 +31,7 @@ Template Name: Career
                     </p>
                     <a href="<?php the_permalink(); ?>" class="learn-more">Learn more</a>
                 </li>
-            <?php endforeach; ?>
+            <?php endwhile; ?>
         </ul>
 
         <?php
