@@ -48,7 +48,7 @@ Template Name: About us
     <h2 class="article_title article_title_who_we_are"><?php the_field('article_title_who_we_are'); ?></h2>
     <p class="subtitle_of_article subtitle_of_article_who_we_are"><?php the_field('subtitle_of_article_who_we_are'); ?></p>
     <p class="article_text_who_we_are"><?php the_field('article_text_who_we_are'); ?></p>
-        <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Video presentation</a>
+        <a href="<?php echo get_permalink('  ............  ') ?>" class="button button_blue">Video presentation</a>
         <img class="about-us-page who-we-are-img left" src="  ............  " alt=""> 
         <img class="about-us-page who-we-are-img right" src="  ............  " alt=""> 
 </div>
@@ -62,9 +62,9 @@ Template Name: About us
     <img class="about-us-page one_company_two_directions_collage_img " src="  ............  " alt=""> 
         <h3 class="article_title article_title_one_company_two_directions"><?php the_field('article_title_one_company_two_directions'); ?></h3>
         <p class="wind_part_text"><?php the_field('wind_part_text'); ?></p>
-                <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Discover Wind services</a>
+                <a href="<?php echo get_permalink('  ............  ') ?>" class="button button_blue">Discover Wind services</a>
         <p class="retail_part_text"><?php the_field('retail_part_text'); ?></p>
-                <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Discover Retail services</a>
+                <a href="<?php echo get_permalink('  ............  ') ?>" class="button button_blue">Discover Retail services</a>
 
 </div>
 
@@ -79,7 +79,7 @@ Template Name: About us
 <!-- button "Show more" with hover efect  (meet our team) -->
 
 
-            <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Show more</a> <!-- ???? -->
+            <a href="<?php echo get_permalink('  ............  ') ?>" class="button button_blue">Show more</a> <!-- ???? -->
 
 </div>
 
@@ -87,12 +87,11 @@ Template Name: About us
 <!-- Join or Contact us  Section -->
 
 <div class="join_or_contact_us">
-
+    <h5 class="article_title article_title_want_to_join"><?php the_field('article_title_want_to_join'); ?></h5>
     <img class="about-us-page join_or_contact_us_collage_img " src="  ............  " alt=""> 
-        <h5 class="article_title article_title_want_to_join"><?php the_field('article_title_want_to_join'); ?></h5>
         <p class="subtitle_of_article_want_to_join"><?php the_field('subtitle_of_article_want_to_join'); ?></p>
-            <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Work for us</a>
-            <a href="<?php echo get_permalink('  ............  ') ?>" class="button_blue">Work with us</a>
+            <a href="<?php echo get_permalink('  ............  ') ?>" class="button button_blue">Work for us</a>
+            <a href="<?php echo get_permalink('  ............  ') ?>" class="button button_light_blue">Work with us</a>
 
 </div>
 
@@ -119,20 +118,24 @@ Template Name: About us
 <div class="subscribes_for_more">
     <p class="article_title_subscribes_for_more">Subscribes for more!</p>
 
+    <div class="social_media">
+        <a class="social_media icon_vimeo" href="<?php echo get_permalink('  ............  ') ?>" class="button">Work for us</a>
+        <p class="social_media text">Wind</p>
+        <a class="social_media icon_linkedin_1" href="<?php echo get_permalink('  ............  ') ?>" class="button">Work for us</a>
+        <p class="social_media text">Retail</p>
+        <a class="social_media icon_linkedin_2" href="<?php echo get_permalink('  ............  ') ?>" class="button">Work for us</a>
+        <p class="social_media text">Vimeo</p>
+    </div>
+
 </div>
 
 
 
 
 
-
-
-
- 
-
-
 </body>
     <?php endwhile; ?>
 
 </main>
+
 <?php get_footer(); ?>
