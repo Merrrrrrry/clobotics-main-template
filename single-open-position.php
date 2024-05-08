@@ -14,18 +14,14 @@ Template Name: single-open-position
             <p><strong>Location:</strong> <?php the_field('job_location'); ?></p>
             <p><strong>Job Type:</strong> <?php the_field('job_type'); ?></p>
             <p><strong>Deadline:</strong> <?php the_field('deadline'); ?></p>
-            <p><strong>In this role, you will:</strong></p>
-            <p><?php the_field('headline_1'); ?></p>
-            <p><?php the_field('paragraph_1'); ?></p>
-            <p><strong>We are looking for:</strong></p>
-            <p><?php the_field('headline_2'); ?></p>
-            <p><?php the_field('paragraph_2'); ?></p>
-            <p><strong>We offer:</strong></p>
-            <p><?php the_field('headline_3'); ?></p>
-            <p><?php the_field('paragraph_3'); ?></p>
-            <p><strong>About Us:</strong></p>
-            <p><?php the_field('headline_4'); ?></p>
-            <p><?php the_field('paragraph_4'); ?></p>
+            <p><?php the_field('headline-1'); ?></p>
+            <p><?php the_field('paragraph-1'); ?></p>
+            <p><?php the_field('headline-2'); ?></p>
+            <p><?php the_field('paragraph-2'); ?></p>
+            <p><?php the_field('headline-3'); ?></p>
+            <p><?php the_field('paragraph-3'); ?></p>
+            <p><?php the_field('headline-4'); ?></p>
+            <p><?php the_field('paragraph-4'); ?></p>
         </article>
     <?php endwhile; ?>
 
