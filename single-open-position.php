@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: single_open_positions
+Template Name: single-open-position
 */
 ?>
 
