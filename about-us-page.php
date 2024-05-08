@@ -11,7 +11,7 @@ Template Name: About us
     <?php while(have_posts()): the_post(); ?>
         <?php the_content(); ?>
 
-<body>
+<body class="maria-who-we-are">
 
 <!-- Hero Section WITHOUT navbar -->
 
