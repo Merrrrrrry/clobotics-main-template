@@ -10,7 +10,7 @@ Template Name: Career
 
     <h2>Open Positions</h2>
 
-    <!-- Search bar -->
+     <!-- Search bar -->
     <div class="search-bar">
         <form method="get" action="">
             <input type="text" name="search_query" id="search-input" placeholder="Search...">
@@ -48,13 +48,13 @@ Template Name: Career
 
     <!-- Job Positions -->
     <?php
-    // Retrieve filter values from form submission
+    // Retrieve search query and filter values from URL parameters
     $search_query = isset($_GET['search_query']) ? sanitize_text_field($_GET['search_query']) : '';
     $sector = isset($_GET['sector']) ? sanitize_text_field($_GET['sector']) : '';
     $region = isset($_GET['region']) ? sanitize_text_field($_GET['region']) : '';
     $job_type = isset($_GET['job_type']) ? sanitize_text_field($_GET['job_type']) : '';
 
-    // Query job positions based on filter criteria
+    // Query job positions
     $args = array(
         'post_type' => 'open-position',
         'posts_per_page' => -1,
@@ -72,8 +72,8 @@ Template Name: Career
                 'compare' => '=',
             ),
             array(
-                'key' => 'job_type', 
-                'value' => $job_type, 
+                'key' => 'job_type',
+                'value' => $job_type,
                 'compare' => '=',
             ),
         ),
@@ -101,9 +101,39 @@ Template Name: Career
         <?php
         wp_reset_postdata();
     else :
-        ?>
-        <p>No open positions found for "<?php echo $search_query; ?>"</p>
-    <?php endif; ?>
+        // Display all positions if no filters are applied
+        if (empty($search_query) && empty($sector) && empty($region) && empty($job_type)) {
+            $all_positions = new WP_Query(array(
+                'post_type' => 'open-position',
+                'posts_per_page' => -1,
+            ));
+            if ($all_positions->have_posts()) :
+                ?>
+                <ul class="position-list">
+                    <?php while ($all_positions->have_posts()) : $all_positions->the_post(); ?>
+                        <li class="position-item">
+                            <h3><?php the_field('job_title'); ?></h3>
+                            <p>
+                                <?php
+                                $job_location = get_field('job_location');
+                                $job_type = get_field('job_type');
+                                echo $job_location . ' | ' . $job_type;
+                                ?>
+                            </p>
+                            <a href="<?php the_permalink(); ?>" class="learn-more">Learn more</a>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+                <?php
+                wp_reset_postdata();
+            else :
+                echo '<p>No open positions found.</p>';
+            endif;
+        } else {
+            echo '<p>No open positions found for the selected criteria.</p>';
+        }
+    endif;
+    ?>
 
 </main>
 
