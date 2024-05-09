@@ -48,38 +48,41 @@ Template Name: Career
 
     <!-- Job Positions -->
     <?php
-    // Retrieve search query and filter values from URL parameters
-    $search_query = isset($_GET['search_query']) ? sanitize_text_field($_GET['search_query']) : '';
-    $sector = isset($_GET['sector']) ? sanitize_text_field($_GET['sector']) : '';
-    $region = isset($_GET['region']) ? sanitize_text_field($_GET['region']) : '';
-    $job_type = isset($_GET['job_type']) ? sanitize_text_field($_GET['job_type']) : '';
+   // Retrieve search query from URL parameter
+$search_query = isset($_GET['search_query']) ? sanitize_text_field($_GET['search_query']) : '';
 
-    // Query job positions
-    $args = array(
-        'post_type' => 'open-position',
-        'posts_per_page' => -1,
-        's' => $search_query, // Search query
-        'meta_query' => array(
-            'relation' => 'AND',
-            array(
-                'key' => 'sector_career',
-                'value' => $sector,
-                'compare' => '=',
-            ),
-            array(
-                'key' => 'region_career',
-                'value' => $region,
-                'compare' => '=',
-            ),
-            array(
-                'key' => 'job_type',
-                'value' => $job_type,
-                'compare' => '=',
-            ),
+// Retrieve filter values from URL parameters
+$sector = isset($_GET['sector']) ? sanitize_text_field($_GET['sector']) : '';
+$region = isset($_GET['region']) ? sanitize_text_field($_GET['region']) : '';
+$job_type = isset($_GET['job_type']) ? sanitize_text_field($_GET['job_type']) : '';
+
+// Query job positions based on search query and filters
+$args = array(
+    'post_type' => 'open-position',
+    'posts_per_page' => -1, 
+    's' => $search_query, // Search query
+    'meta_query' => array(
+        'relation' => 'AND', // Combine multiple meta queries with AND
+        array(
+            'key' => 'sector_career',
+            'value' => $sector,
+            'compare' => '='
         ),
-    );
+        array(
+            'key' => 'region_career',
+            'value' => $region,
+            'compare' => '='
+        ),
+        array(
+            'key' => 'job_type',
+            'value' => $job_type,
+            'compare' => '='
+        )
+    )
+);
 
-    $related_positions = new WP_Query($args);
+$related_positions = new WP_Query($args);
+
 
     if ($related_positions->have_posts()) :
         ?>
