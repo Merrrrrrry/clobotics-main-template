@@ -33,6 +33,7 @@ Template Name: Career
                 <option value="americas">Americas</option>
                 <option value="europe">Europe</option>
                 <option value="asia">Asia</option>
+                
             </select>
             <label for="job_type">Job Type:</label>
             <select name="job_type" id="job_type">
@@ -50,8 +51,8 @@ Template Name: Career
 $search_query = isset($_GET['search_query']) ? sanitize_text_field($_GET['search_query']) : '';
 
 // Retrieve filter values from URL parameters
-$sector = isset($_GET['sector_career']) ? sanitize_text_field($_GET['sector']) : '';
-$region = isset($_GET['region_career']) ? sanitize_text_field($_GET['region']) : '';
+$sector = isset($_GET['sector']) ? sanitize_text_field($_GET['sector']) : '';
+$region = isset($_GET['region']) ? sanitize_text_field($_GET['region']) : '';
 $job_type = isset($_GET['job_type']) ? sanitize_text_field($_GET['job_type']) : '';
 
 // Query job positions based on search query and filters
