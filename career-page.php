@@ -8,7 +8,7 @@ Template Name: Career
 
 <main>
 
-    <h2>Open Positions</h2>
+    <h2>Career at Clobotics</h2>
 
     <div class="search-bar">
         <form method="get" action="">
@@ -17,7 +17,8 @@ Template Name: Career
         </form>
     </div>
 
-    
+    <h2>Open Positions</h2>
+
     <?php
     
     $search_query = isset($_GET['search_query']) ? sanitize_text_field($_GET['search_query']) : '';
