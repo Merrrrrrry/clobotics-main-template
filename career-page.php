@@ -40,7 +40,7 @@ if ($related_positions->have_posts()) :
     <ul class="position-list">
         <?php while ($related_positions->have_posts()) : $related_positions->the_post(); ?>
             <li class="position-item">
-                <h3><?php the_title(); ?></h3>
+            <h3><?php the_field('job_title'); ?></h3>
                 <p>
                     <?php
                     $job_location = get_field('job_location');
